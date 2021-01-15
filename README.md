@@ -13,7 +13,7 @@ This JS library lets you create placeholder images via JavaScript.
     npm i generate-placeholder-image
     ```
 
-* Import it the generator function
+* Import the generator function
     ```javascript
     const generatePlaceholderImage = require('generate-placeholder-image')
     ```
@@ -27,7 +27,7 @@ This JS library lets you create placeholder images via JavaScript.
       g: 255,
       b: 0,
       text: 'Hello, World!',
-      output: '~/images/placeholder.png'
+      output: '/some/directory/images/placeholder.png'
     })
     ```
 
@@ -55,9 +55,13 @@ This JS library lets you create placeholder images via JavaScript.
 
 * Start using it:
     ```bash
-    generate-placeholder-image -w 300 -h 300 -r 255 -g 255 -b 0 -t 'Hello, World!' -o '~/images/placeholder.png'
+    generate-placeholder-image -w 300 -h 300 -r 255 -g 255 -b 0 -t 'Hello, World!' -o '/some/directory/images/placeholder.png'
     ```
 
+* Or use it via `npx`:
+    ```bash
+    npx generate-placeholder-image -w 300 -h 300 -r 255 -g 255 -b 0 -t 'Hello, World!' -o '/some/directory/images/placeholder.png'
+    ```
 
 #### CLI config reference with default values
 
