@@ -1,0 +1,20 @@
+{
+  "name": "generate-placeholder-image",
+  "version": "1.0.0",
+  "description": "Generates placeholder images with size, color and text",
+  "main": "index.js",
+  "scripts": {
+    "generate": "./bin/index.js",
+    "start": "./bin/index.js",
+    "generate-placeholder-image": "./bin/index.js"
+  },
+  "bin": "./bin/index.js",
+  "author": "Pascal Thormeier",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.1.1",
+    "complementary-colors": "^1.0.5"
+  }
+}
