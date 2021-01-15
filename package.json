@@ -2,6 +2,7 @@
   "name": "generate-placeholder-image",
   "version": "1.0.0",
   "description": "Generates placeholder images with size, color and text",
+  "homepage": "https://github.com/thormeier/generate-placeholder-images#readme",
   "main": "index.js",
   "scripts": {
     "generate": "./bin/index.js",
@@ -10,11 +11,14 @@
   },
   "bin": "./bin/index.js",
   "author": "Pascal Thormeier",
+  "funding": [
+    "https://www.buymeacoffee.com/pthormeier",
+    "https://paypal.me/pthormeier"
+  ],
   "license": "MIT",
   "dependencies": {
     "canvas": "^2.6.1",
     "command-line-args": "^5.1.1",
-    "command-line-usage": "^6.1.1",
-    "complementary-colors": "^1.0.5"
+    "command-line-usage": "^6.1.1"
   }
 }

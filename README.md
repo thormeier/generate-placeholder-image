@@ -104,6 +104,18 @@ produces:
 
 ---
 
+Executing this (changed font):
+
+```bash
+generate-placeholder-image -f Times -o ./examples/times.png
+```
+
+produces this:
+
+![times.png](./examples/times.png)
+
+---
+
 Executing this (or equivalent parameters for the generator function):
 
 ```bash
