@@ -1,6 +1,8 @@
 # generate-placeholder-image
 
 This JS library lets you create placeholder images via JavaScript.
+[Here's a short post on dev.to describing how this thing was built.](https://dev.to/thormeier/how-to-generate-placeholder-images-with-a-simple-node-script-3ocf)
+
 
 ## Usage
 
