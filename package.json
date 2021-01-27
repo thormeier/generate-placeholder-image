@@ -1,6 +1,6 @@
 {
   "name": "generate-placeholder-image",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Generates placeholder images with size, color and text",
   "homepage": "https://github.com/thormeier/generate-placeholder-images#readme",
   "main": "index.js",
