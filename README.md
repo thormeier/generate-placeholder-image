@@ -2,8 +2,6 @@
 
 This JS library lets you create placeholder images via JavaScript.
 
-**Attention:** This library currently only supports PNG.
-
 ## Usage
 
 ### Within your application
@@ -30,6 +28,8 @@ This JS library lets you create placeholder images via JavaScript.
       output: '/some/directory/images/placeholder.png'
     })
     ```
+
+* **If canvas is not working correctly/at all, you might need to compile a few things. Please see [the canvas project wiki](https://github.com/Automattic/node-canvas/wiki/_pages) for detailed explanation.**
 
 #### Config reference with default values
 
@@ -89,6 +89,13 @@ Example
   ./generate.js -w 100 -h 100 -r 0 -g 0 -b 255 -t "Hello, World!" -f Helvetica  
   -o ./placeholder.png     
 ```
+
+## Currently supported file types
+
+* `image/png` (By specifying a JPG as the output file, for example `generate-placeholder-image -o ./examples/image.jpg`)
+* `image/jpeg` (By specifying a PNG as the output file, for example `generate-placeholder-image -o ./examples/image.jpg`)
+* `application/pdf` (By specifying a PDF as the output file, for example `generate-placeholder-image -o ./examples/image.pdf`)
+* `image/svg+xml` (By specifying an SVG as the output file, for example `generate-placeholder-image -o ./examples/image.svg`)
 
 ## Examples
 

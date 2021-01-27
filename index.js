@@ -47,27 +47,45 @@ const generateImage = userOptions => {
     ...userOptions
   }
 
-const width = options.width
-const height = options.height
-const color = colorToHex(options.red, options.green, options.blue)
-const textColor = invertColor(options.red, options.green, options.blue)
+  let type = options.output.split('.').pop()
+  if (type === 'jpeg') {
+    type = 'jpg'
+  }
 
-const canvas = createCanvas(width, height)
-const context = canvas.getContext('2d')
+  const allowedTypes = ['png', 'jpg', 'pdf', 'svg']
 
-const fontSize = height / 10
+  if (allowedTypes.indexOf(type) === -1) {
+    throw new Error(`Unknown image type "${type}", expected one of "${allowedTypes.join('", "')}"`)
+  }
 
-context.fillStyle = color
-context.fillRect(0, 0, width, height)
-context.fillStyle = textColor
-context.font = `${fontSize}px ${options.font}`
 
-const textSize = context.measureText(options.text)
+  const width = options.width
+  const height = options.height
+  const color = colorToHex(options.red, options.green, options.blue)
+  const textColor = invertColor(options.red, options.green, options.blue)
 
-context.fillText(options.text , (canvas.width / 2) - (textSize.width / 2), (canvas.height / 2) + (fontSize / 2))
+  const canvas = createCanvas(width, height, type)
+  const context = canvas.getContext('2d')
 
-const buffer = canvas.toBuffer('image/png')
-fs.writeFileSync(options.output, buffer)
+  const fontSize = height / 10
+
+  context.fillStyle = color
+  context.fillRect(0, 0, width, height)
+  context.fillStyle = textColor
+  context.font = `${fontSize}px ${options.font}`
+
+  const textSize = context.measureText(options.text)
+
+  context.fillText(options.text , (canvas.width / 2) - (textSize.width / 2), (canvas.height / 2) + (fontSize / 2))
+
+  const mimeTypes = {
+    png: 'image/png',
+    jpg: 'image/jpeg',
+    pdf: 'application/pdf',
+    svg: 'image/svg+xml'
+  }
+  const buffer = canvas.toBuffer(mimeTypes[type])
+  fs.writeFileSync(options.output, buffer)
 }
 
 module.exports = generateImage
