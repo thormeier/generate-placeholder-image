@@ -55,14 +55,16 @@ const textColor = invertColor(options.red, options.green, options.blue)
 const canvas = createCanvas(width, height)
 const context = canvas.getContext('2d')
 
+const fontSize = height / 10
+
 context.fillStyle = color
 context.fillRect(0, 0, width, height)
 context.fillStyle = textColor
-context.font = `${height / 10}px ${options.font}`
+context.font = `${fontSize}px ${options.font}`
 
 const textSize = context.measureText(options.text)
 
-context.fillText(options.text , (canvas.width / 2) - (textSize.width / 2), (canvas.height / 2))
+context.fillText(options.text , (canvas.width / 2) - (textSize.width / 2), (canvas.height / 2) + (fontSize / 2))
 
 const buffer = canvas.toBuffer('image/png')
 fs.writeFileSync(options.output, buffer)

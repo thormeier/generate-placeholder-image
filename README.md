@@ -95,12 +95,12 @@ Example
 Executing this (all-default parameters, except `--output`/`-o` or equivalent parameters for the generator function):
 
 ```bash
-generate-placeholder-image -o ./expamples/image.png
+generate-placeholder-image -o ./examples/image.png
 ```
 
 produces:
 
-![image.png](./examples/image.png)
+![image.png](https://raw.githubusercontent.com/thormeier/generate-placeholder-image/main/examples/image.png)
 
 ---
 
@@ -112,7 +112,7 @@ generate-placeholder-image -f Times -o ./examples/times.png
 
 produces this:
 
-![times.png](./examples/times.png)
+![times.png](https://raw.githubusercontent.com/thormeier/generate-placeholder-image/main/examples/times.png)
 
 ---
 
@@ -124,4 +124,4 @@ generate-placeholder-image -w 300 -h 150 -r 255 -g 255 -b 0 -t 'Hello, World!' -
 
 produces this:
 
-![hello-world.png](./examples/hello-world.png)
+![hello-world.png](https://raw.githubusercontent.com/thormeier/generate-placeholder-image/main/examples/hello-world.png)
