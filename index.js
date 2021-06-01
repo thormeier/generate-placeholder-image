@@ -61,8 +61,8 @@ const generateImage = userOptions => {
 
   const width = options.width
   const height = options.height
-  const color = colorToHex(options.red, options.green, options.blue)
-  const textColor = invertColor(options.red, options.green, options.blue)
+  const color = colorToHex(options.r, options.g, options.b)
+  const textColor = invertColor(options.r, options.g, options.b)
 
   const canvas = createCanvas(width, height, type)
   const context = canvas.getContext('2d')
